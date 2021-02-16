@@ -9,7 +9,7 @@ After you complete this lab, you'll be able to:
 
 #### Task 1: Open the Azure Portal
 
-1. In the open browser window, navigate to the **Azure Portal** (<https://portal.azure.com>).
+1. In the web browser, navigate to the **Azure Portal** (<https://portal.azure.com>).
 
 1. When prompted, authenticate with your student's account.
 
