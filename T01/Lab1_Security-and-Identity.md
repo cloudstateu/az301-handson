@@ -310,7 +310,7 @@ After you complete this lab, you'll be able to:
 
 1. In the **Open** dialog box, navigate to the **\T01\files** folder, select the **vm-template.parameters.json** file, and click **Open**.
 
-1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to replace the placeholder for the **$KEY_VAULT_ID** parameter in the **vm-template.parameters.json** parameters file with the value of the **$KEY_VAULT_ID** variable:
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to replace the placeholder for the ``$KEY_VAULT_ID`` parameter in the ``vm-template.parameters.json`` parameters file with the value of the ``$KEY_VAULT_ID variable``:
 
     ```sh
     sed -i.bak1 's/"$KEY_VAULT_ID"/"'"$KEY_VAULT_ID_REGEX"'"/' ~/vm-template.parameters.json
@@ -390,24 +390,7 @@ After you complete this lab, you'll be able to:
 
 #### Task 1: Open Cloud Shell
 
-1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
-
-1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
-
-    ```
-    az group list --query "[?starts_with(name,'[YOURRESOURCEGROUP]')]".name --output tsv
-    ```
-
-1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
-
-#### Task 2: Delete resource groups
-
-1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
-
-    ```sh
-    az group list --query "[?starts_with(name,'[YOURRESOURCEGROUP]')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-    ```
-
-1. Close the **Cloud Shell** prompt at the bottom of the portal.
-
-> **Review**: In this exercise, you removed the resources used in this lab.
+1. Navigate to your resource group in the Azure Portal
+2. Select all the resources created in the resource group
+    > **Note** You may leave cloudshell strorage (with name **cloudshellstor[YOURNAME]**) for further use
+3. Press "Delete" at the top of the blade.

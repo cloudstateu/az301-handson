@@ -100,7 +100,7 @@ After you complete this lab, you'll be able to:
 
 1. On the **Function App** blade, click the **Create** button.
 
-1. On the **Basics** tab of the **Function App** blade, specify the following and click **Next: Hosting >**:
+1. On the **Basics** tab of the **Function App** blade, specify the following:
 
     - Subscription: the name of the Azure subscription you used in the previous task
 
@@ -110,11 +110,13 @@ After you complete this lab, you'll be able to:
 
     - Publish: **Code**
 
-    - Runtime stack: **.NET Core**
+    - Runtime stack: **.NET**
+
+    - Version: **3.1**
 
     - Region: the Azure region to which you deployed an instance of Cognitive Service in the previous task
 
-1. On the **Hosting** tab of the **Function App** blade, specify the following and click **Next: Monitoring >**:
+2. Click **Next: Hosting >** at the bottom and on the **Hosting** tab of the **Function App** blade, specify the following:
 
     - Storage account: accept the default value of the Storage Account name.
 
@@ -122,27 +124,27 @@ After you complete this lab, you'll be able to:
 
     - Plan type: **Consumption (Serverless)**
 
-1. On the **Monitoring** tab of the **Function App** blade, specify the following and click **Review + create**:
-
+4. Click **Next: Monitoring >** and on the **Monitoring** tab of the **Function App** blade, specify the following:
+   
     - Enable Application Insights: **No**.
 
-1. On the **Review + create** tab of the **Function App** blade, click **Create**:
+5. Click **Review + create** and on the **Review + create** tab of the **Function App** blade, click **Create**:
 
-1. Wait for the provisioning of the function app to complete before you proceed to the next step.
+6. Wait for the provisioning of the function app to complete before you proceed to the next step.
 
-1. Navigate to the the newly provisioned function app.
+7. Navigate to the the newly provisioned function app.
 
-1. On the Azure function blade, under **Settings** click on **Configuration** at the left.
+8. On the Azure function blade, under **Settings** click on **Configuration** at the left.
 
-1. On the **Application settings** tab, click the **+ New application setting** link, perform the following tasks, and click **OK**:
+9.  On the **Application settings** tab, click the **+ New application setting** link, perform the following tasks, and click **OK**:
 
     - In the **Name** text box, type **EndpointUrl**
 
-    - In the **Value** text box, enter the value of **cognitiveEndpointUrl** 
+    - In the **Value** text box, enter the value of **EndpointUrl** 
 
     - Leave the **Deployment slot setting** checkbox cleared.
 
-1. In the **Application Settings** section, click the **+ New application setting** link again, perform the following tasks, and click **OK**:
+10. In the **Application Settings** section, click the **+ New application setting** link again, perform the following tasks, and click **OK**:
 
     - In the **Name** text box, type **EndpointKey**.
 
@@ -150,17 +152,17 @@ After you complete this lab, you'll be able to:
 
     - Leave the **Deployment slot setting** checkbox cleared.
 
-1. Click the **Save** button at the top of the **Application settings** tab.
+11. Click the **Save** button at the top of the **Application settings** tab.
 
-1. In the **Deployment** section, select the **Deployment Center** entry.
+12. In the **Deployment** section, select the **Deployment Center (classic)** entry.
 
-1. On the **Deployment Center** blade, scroll down to the bottom of the blade and click **External** and then click **Continue**.
+13. On the **Deployment Center** blade, scroll down to the bottom of the blade and click **External** and then click **Continue**.
 
-1. Click **App Service build service** and click **Continue**.
+14. Click **App Service build service** and click **Continue**.
 
-1. Once the **Code** section is displayed, perform the following tasks
+15. Once the **Code** section is displayed, perform the following tasks
 
-    - In the **Repository** text box, type **https://github.com/polichtm/cognitive-services-function**.
+    - In the **Repository** text box, type **https://github.com/polichtm/cognitive-services-function**
 
     - In the **Branch** text box, type **master**.
 
@@ -172,7 +174,7 @@ After you complete this lab, you'll be able to:
 
     - Click the **Continue** button.
 
-1. Click **Finish** and wait for the deployment to complete before you proceed to the next task.
+16. Click **Finish** and wait for the deployment to complete before you proceed to the next task.
 
     > **Note**: You will be able to determine that the first deployment has completed by monitoring the **Deployments** tab. This tab updates automatically.
 
@@ -217,9 +219,9 @@ After you complete this lab, you'll be able to:
 
     - In the **Resource group** section, select yor resource group.
 
-    - In the **Name** text box, enter the value **CognitiveWorkflow**.
+    - In the **Name** text box, enter the value **[YOURNAME]CognitiveWorkflow**.
 
-    - In the **Location** drop-down list, select the same Azure region you chose in the previous exercise of this lab.
+    - In the **Location** drop-down list, select **West Europe**.
 
     - In the **Log Analytics** section, ensure that the **Off** button is selected.
 
